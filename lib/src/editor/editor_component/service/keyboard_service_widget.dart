@@ -315,11 +315,6 @@ class KeyboardServiceWidgetState extends State<KeyboardServiceWidget>
         return;
       }
 
-      final children =
-          WidgetsBinding.instance.focusManager.primaryFocus?.children;
-      if (children != null && !children.contains(focusNode)) {
-        editorState.selection = null;
-      }
       textInputService.close();
     }
   }
